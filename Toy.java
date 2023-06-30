@@ -4,11 +4,17 @@ public class Toy implements Comparable<Toy>{
     private int id;
     private String name;
     private int weight;
+    private int quantaty;
 
-    public Toy(String name, int weight){
+    public Toy(String name, int weight, int quantaty){
         this.id = count++;
         this.name = name;
         this.weight = weight;
+        this.quantaty = quantaty;
+    }
+
+    public Toy(String name, int weight){
+        this(name, weight, 1);
     }
 
     public int getId(){
@@ -21,6 +27,14 @@ public class Toy implements Comparable<Toy>{
 
     public int getWeight(){
         return weight;
+    }
+
+    public int getQuantaty(){
+        return quantaty;
+    }
+
+    public void setWeight(int weight){
+        this.weight = weight;
     }
 
     @Override
